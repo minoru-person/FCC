@@ -1,47 +1,14 @@
- /* Ugly Code. version 0.
+ /* Rewrote Code. version 0.1
  
- function bouncer1(arr){
-      for(var i=0;i<arr.length;i++){
-      
-		     var x = arr[i];
-
-	     if(Number.isNaN(x)){
-		        arr.splice(i,1);
-		     }
-		     
-		  }
-
-	    for(var i=0;i<arr.length;i++){
-
-		   var x = arr[i];
-
-	     if(x == null){
-		        arr.splice(i,1);
-		     }
-		     
-			 }
-
-			     
-	      for(var i=0;i<arr.length;i++){
-
-		   		     var x = arr[i];
-
-	        if(x == false){
-		           arr.splice(i,1);
-		       }
-		     
-			   }
-
-			  for(var i=0;i<arr.length;i++){
-
-		    		   var x = arr[i];
-
-	     if(x == 0){
-		           arr.splice(i,1);
-		     }
-		     
-		     }	   
-			     
-
-       console.log(arr);
+function bouncer1(arr){
+    var arr1 = [];
+    for(var i=0;i<arr.length; i++){
+	var x = Boolean(arr[i]);
+				
+	if(x){
+          arr1.push(arr[i]);
+	}
      }
+     
+     console.log(arr1);
+}
