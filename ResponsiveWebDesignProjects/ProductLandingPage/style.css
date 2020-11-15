@@ -1,0 +1,57 @@
+      body{
+        width:600px;
+      }
+      img{
+      width: 20%;
+      }
+
+      ul{
+      list-style-type:none;
+      }
+
+      a{
+        text-decoration:none;
+      }
+
+      li {
+        display:inline;
+        background-color: #f1f1f1;
+      }
+
+      #header {
+        clear:both;
+      }
+
+      #nav-bar {
+              display: flex; 
+              position: fixed;
+              top: 0;
+              right: 10px;
+      }
+
+
+@media screen and (max-width: 600px) {
+          #video{
+               display: none;
+          }
+          img{
+        width:10%;
+      }
+    }
+
+@media screen and (max-width: 400px) {
+          li {
+                  display:block;
+            }
+
+          #email {
+            display:block;
+          }
+
+          #form {
+          display:block;
+          }
+
+
+
+    }
