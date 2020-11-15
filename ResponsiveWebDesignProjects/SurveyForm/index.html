@@ -1,0 +1,99 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <h1 id="title">Survey Form</h1>
+        <main>
+	  <form id="survey-form">
+	    <br/>
+	    <br/>
+	    <p id="description">Let us know how we can improve Fantasy Football</p>
+
+<div id="nameEmailAge">
+<div>	      
+<label id="name-label" for="name">* Name: </label>
+<input type="text" name="name" id="name" placeholder="Name" required>
+</div>
+<br/>
+<div>
+<label id="email-label" for="email">* Email: </label>
+<input type="email" name="email" id="email" placeholder="youremail@something" required>
+</div>
+<br/>
+<div>
+<label id="number-label" for="age">* Age: </label>
+<input type="number" name="age" min="1" max="200" id="number"  placeholder="e.g. 65" required>
+</div>
+</div>
+
+<br/>
+<br/>
+
+<div class="flex-container">
+  <div> Which option best describes your current role? </div>
+  <div>
+  <select name="role" id="dropdown">
+    <option value="student">Student</option>
+    <option value="job">Full time Job</option>
+    <option value="learner">Full time learner</option>
+    <option value="no-say">Prefer not to say</option>
+    <option value="retired">Retired</option>
+    <option value="other">Other</option>
+  </select>
+  </div>
+</div>
+
+  <br/>
+  <br/>
+
+  <div class="flex-container">
+*How likely is that you would recommend Fantasy Football to a friend?
+<div>
+<input type="radio" name="recommend" value="definitely">Definitely<br/>
+<input type="radio" name="recommend" value="maybe">Maybe<br/>
+<input type="radio" name="recommend" value="not-sure">Not sure<br/>
+</div>
+</div>
+<br/>
+<br/>
+
+<div class="flex-container">
+<div>Which Fatasy Football site do you prefer?</div>
+  <select name="login">
+    <option value="website">Website</option>
+    <option value="app">App</option>
+  </select>
+</div>
+  <br/>
+  <br/>
+
+<div class="flex-container">
+Things that should be improved(Check all that apply):
+
+<div>
+<input type="checkbox" name="future" value="size"> Squad Size<br>
+<input type="checkbox" name="future" value="design"> Design<br>
+<input type="checkbox" name="future" value="point-system"> Point System<br>
+<input type="checkbox" name="future" value="deadline"> Transfer deadline<br>
+<input type="checkbox" name="future" value="buget"> Transfer Budget<br>
+<input type="checkbox" name="future" value="selection"> Player selection <br>
+</div>
+</div>
+
+<br/>
+<br/>
+
+<div class="flex-container">
+<div>Any Comments or Suggestions?</div>
+<textarea rows="4" cols="50" name="comment" form="usrform" >
+Enter your comment here...</textarea>
+</div>
+
+
+<br/>
+<br/>
+<div class="flex-container">
+  <input type="submit" value="Submit" id="submit">
+  </div>
+<br/>
+<br/>
+</form>
+</main>
