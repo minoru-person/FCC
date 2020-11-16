@@ -1,0 +1,534 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<!DOCTYPE html>
+	<html>
+		<head>
+		<title>PHP: Manual</title>
+		<link rel="stylesheet" href="style.css" type="text/css"></style>
+		</head>
+	<body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+	<nav id="navbar">
+	<header>Types</header>
+	<ul>
+		<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+		<li><a href="#Booleans" class="nav-link">Booleans</a></li>
+		<li><a href="#Integers" class="nav-link">Integers</a></li>
+		<li><a href="#Floating_Points" class="nav-link">Floating Points</a></li>
+		<li><a href="#Strings" class="nav-link">Strings</a></li>
+		<li><a href="#Arrays"  class="nav-link">Arrays</a></li>
+		<li><a href="#Iterables"  class="nav-link">Iterables</a></li>
+		<li><a href="#Objects"  class="nav-link">Objects</a></li>
+		<li><a href="#Resources"  class="nav-link">Resources</a></li>
+		<li><a href="#NULL"  class="nav-link">NULL</a></li>
+		<li><a href="#Callbacks"  class="nav-link">Callbacks</a></li>
+		<li><a href="#Pseudo_Type"  class="nav-link">Pseudo Type</a></li>
+		<li><a href="#Type_Juggling"  class="nav-link">Type juggling</a></li>
+	</ul>
+	</nav>
+
+	<main id="main-doc">
+
+
+	<section class="main-section" id="Introduction">
+		<header class="headerDocument" >Introduction</header>
+		<p>PHP supports ten primitive types.</p>
+
+		<p>Four scalar types:</p>
+		<ul>
+		<li><a href="" class="paragraph_link">boolean</a></li>
+		<li><a href="" class="paragraph_link">integer</a></li>
+		<li><a href="" class="paragraph_link">float</a>(floating-point number, aka <a href="" class="paragraph_link">double</a>)</li>
+		<li><a href="" class="paragraph_link">string</a></li>
+		</ul>
+
+		<p>Four compound types:</p>
+		<ul>
+		<li><a href="" class="paragraph_link">array</a></li>
+		<li><a href="" class="paragraph_link">object</a></li>
+		<li><a href="" class="paragraph_link">callable</a></li>
+		<li><a href="" class="paragraph_link">iterable</a></li>
+		</ul>
+
+		<p>And finally two special types:</p>
+		<ul>
+		<li><a href="" class="paragraph_link">resource</a></li>
+		<li><a href="" class="paragraph_link">NULL</a></li>
+		</ul>
+
+		<p>This manual also introduces some pseduo-types for readibility reasons:</p>
+
+		<ul>
+		<li><a href="" class="paragraph_link">mixed</a></li>
+		<li><a href="" class="paragraph_link">number</a></li>
+		<li><a href="" class="paragraph_link">callback</a>(aka <a href="" class="paragraph_link">callable</a>)</li>
+		<li><a href="" class="paragraph_link">array|object</a></li>
+		<li>void</li>
+		</ul>
+
+		<p>And the pseudo-variable $....</p>
+
+		<p>Some references to the type "double" may remain in the manual. Consider double the same as float; the two names exist only for historic reasons.</p>
+		
+		<p>The type of a variable is not usually set by the programmer; rather, it is decided at runtime by PHP depending on the context in which that variable is used.</p>
+		
+		<div id="code_box">
+		<p>Note: To check the type and value of an expression, use the var_dump() function.</p>
+		<p>To get a human-readable representation of a type for debugging, use the gettype() function. 
+		To check for a certain type, do not use gettype(), but rather the is_type functions. Some examples: </p> 
+		<div id="code">
+		<code>
+		&lt;?php <br/>
+		$a_bool = TRUE;   // a boolean <br/>
+		$a_str  = "foo";  // a string <br/>
+		$a_str2 = 'foo';  // a string <br/>
+		$an_int = 12;     // an integer <br/>
+		<br/>
+		echo gettype($a_bool); // prints out:  boolean <br/>
+		echo gettype($a_str);  // prints out:  string <br/>
+		<br/>
+		// If this is an integer, increment it by four <br/>
+		if (is_int($an_int)) { <br/>
+		$an_int += 4; <br/>
+		} <br/>
+		<br/>
+		// If $a_bool is a string, print it out <br/>
+		// (does not print out anything) <br/>
+		if (is_string($a_bool)) { <br/>
+		echo "String: $a_bool"; <br/>
+		} <br/>
+		?>
+		</code>
+		</div>
+		</div>
+
+		<p>To forcibly convert a variable to a certain type, either cast the variable or use the settype() function on it.</p>
+
+		<p>Note that a variable may be evaluated with different values in certain situations, depending on what type it is at the time. 
+			For more information, see the section on Type Juggling. 
+			The type comparison tables may also be useful, as they show examples of various type-related comparisons. 
+		</p>
+
+		</section>
+
+		<br/>
+
+		<br/>
+		<section class="main-section" id="Booleans">
+				<header class="headerDocument" >Booleans</header>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+		</section>
+
+
+		<section class="main-section" id="Integers">
+				<header class="headerDocument" >Integers</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+
+		
+		<section class="main-section" id="Floating_Points">
+			<header class="headerDocument" >Floating Points</header>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+					<div id="code_box">
+			<p>Note: To check the type and value of an expression, use the var_dump() function.</p>
+			<p>To get a human-readable representation of a type for debugging, use the gettype() function. 
+			To check for a certain type, do not use gettype(), but rather the is_type functions. Some examples: </p> 
+			<div id="code">
+			<code>
+			&lt;?php <br/>
+			$a_bool = TRUE;   // a boolean <br/>
+			$a_str  = "foo";  // a string <br/>
+			$a_str2 = 'foo';  // a string <br/>
+			$an_int = 12;     // an integer <br/>
+			<br/>
+			echo gettype($a_bool); // prints out:  boolean <br/>
+			echo gettype($a_str);  // prints out:  string <br/>
+			<br/>
+			// If this is an integer, increment it by four <br/>
+			if (is_int($an_int)) { <br/>
+			$an_int += 4; <br/>
+			} <br/>
+			<br/>
+			// If $a_bool is a string, print it out <br/>
+			// (does not print out anything) <br/>
+			if (is_string($a_bool)) { <br/>
+			echo "String: $a_bool"; <br/>
+			} <br/>
+			?>
+				</code>
+				</div>
+				</div>
+		</section>
+		
+
+				<section class="main-section" id="Strings">
+					<header class="headerDocument">Strings</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+
+				<section class="main-section" id="Arrays">
+					<header class="headerDocument">Arrays</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+					<div id="code_box">
+			<p>Note: To check the type and value of an expression, use the var_dump() function.</p>
+			<p>To get a human-readable representation of a type for debugging, use the gettype() function. 
+			To check for a certain type, do not use gettype(), but rather the is_type functions. Some examples: </p> 
+			<div id="code">
+			<code>
+			&lt;?php <br/>
+			$a_bool = TRUE;   // a boolean <br/>
+			$a_str  = "foo";  // a string <br/>
+			$a_str2 = 'foo';  // a string <br/>
+			$an_int = 12;     // an integer <br/>
+			<br/>
+			echo gettype($a_bool); // prints out:  boolean <br/>
+			echo gettype($a_str);  // prints out:  string <br/>
+			<br/>
+			// If this is an integer, increment it by four <br/>
+			if (is_int($an_int)) { <br/>
+			$an_int += 4; <br/>
+			} <br/>
+			<br/>
+			// If $a_bool is a string, print it out <br/>
+			// (does not print out anything) <br/>
+			if (is_string($a_bool)) { <br/>
+			echo "String: $a_bool"; <br/>
+			} <br/>
+			?>
+				</code>
+				</div>
+				</div>
+		</section>
+
+
+				<section class="main-section" id="Iterables">
+					<header class="headerDocument">Iterables</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+					<div id="code_box">
+			<p>Note: To check the type and value of an expression, use the var_dump() function.</p>
+			<p>To get a human-readable representation of a type for debugging, use the gettype() function. 
+			To check for a certain type, do not use gettype(), but rather the is_type functions. Some examples: </p> 
+			<div id="code">
+			<code>
+			&lt;?php <br/>
+			$a_bool = TRUE;   // a boolean <br/>
+			$a_str  = "foo";  // a string <br/>
+			$a_str2 = 'foo';  // a string <br/>
+			$an_int = 12;     // an integer <br/>
+			<br/>
+			echo gettype($a_bool); // prints out:  boolean <br/>
+			echo gettype($a_str);  // prints out:  string <br/>
+			<br/>
+			// If this is an integer, increment it by four <br/>
+			if (is_int($an_int)) { <br/>
+			$an_int += 4; <br/>
+			} <br/>
+			<br/>
+			// If $a_bool is a string, print it out <br/>
+			// (does not print out anything) <br/>
+			if (is_string($a_bool)) { <br/>
+			echo "String: $a_bool"; <br/>
+			} <br/>
+			?>
+				</code>
+				</div>
+				</div>
+		</section>
+		
+
+				<section class="main-section" id="Objects">
+					<header class="headerDocument">Objects</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+		
+				<section class="main-section" id="Resources">
+				  <header class="headerDocument" >Resources</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+		
+				<section class="main-section" id="NULL">
+					<header class="headerDocument" >NULL</header>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+		
+				<section class="main-section"  id="Callbacks">
+					<header class="headerDocument">Callbacks</header>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+		
+				<section class="main-section" id="Pseudo_Type">
+					<header class="headerDocument" >Pseudo Type</header>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Quis blandit turpis cursus in hac habitasse platea dictumst quisque. 
+			Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+			Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. 
+			Tellus mauris a diam maecenas sed enim. 
+			Vivamus at augue eget arcu. 
+			Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. 
+			Est sit amet facilisis magna etiam tempor orci eu. 
+			Etiam sit amet nisl purus in. 
+			Sagittis aliquam malesuada bibendum arcu vitae. 
+			Tincidunt tortor aliquam nulla facilisi. 
+			Tincidunt lobortis feugiat vivamus at augue eget arcu. 
+			Lectus urna duis convallis convallis tellus id. 
+			Integer feugiat scelerisque varius morbi enim nunc. 
+			Vulputate ut pharetra sit amet aliquam id.
+			</p>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+		</section>
+
+		
+				<section class="main-section" id="Type_Juggling">
+				<header  class="headerDocument">Type Juggling</header>
+			<p>
+			Tincidunt augue interdum velit euismod in pellentesque massa. 
+			Nunc eget lorem dolor sed viverra ipsum nunc. 
+			Pharetra magna ac placerat vestibulum lectus mauris. 
+			Feugiat vivamus at augue eget arcu dictum varius. 
+			Cras adipiscing enim eu turpis egestas pretium aenean. 
+			Dolor magna eget est lorem ipsum. 
+			Augue mauris augue neque gravida in fermentum et. 
+			Orci ac auctor augue mauris augue neque gravida in. 
+			Quisque egestas diam in arcu cursus euismod quis viverra. 
+			Bibendum at varius vel pharetra vel turpis nunc.
+			</p>
+
+			<div id="code_box">
+			<p>Note: To check the type and value of an expression, use the var_dump() function.</p>
+			<p>To get a human-readable representation of a type for debugging, use the gettype() function. 
+			To check for a certain type, do not use gettype(), but rather the is_type functions. Some examples: </p> 
+			<div id="code">
+			<code>
+			&lt;?php <br/>
+			$a_bool = TRUE;   // a boolean <br/>
+			$a_str  = "foo";  // a string <br/>
+			$a_str2 = 'foo';  // a string <br/>
+			$an_int = 12;     // an integer <br/>
+			<br/>
+			echo gettype($a_bool); // prints out:  boolean <br/>
+			echo gettype($a_str);  // prints out:  string <br/>
+			<br/>
+			// If this is an integer, increment it by four <br/>
+			if (is_int($an_int)) { <br/>
+			$an_int += 4; <br/>
+			} <br/>
+			<br/>
+			// If $a_bool is a string, print it out <br/>
+			// (does not print out anything) <br/>
+			if (is_string($a_bool)) { <br/>
+			echo "String: $a_bool"; <br/>
+			} <br/>
+			?>
+				</code>
+				</div>
+				</div>
+		</section>
+		</main>
+		</body>
+		</html>
